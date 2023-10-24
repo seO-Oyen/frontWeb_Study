@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /* 
+        # javascript의 이벤트 처리
+
+        1. 이벤트
+            화면에 있는 요소객체들 중에 특정한 이벤트 (클릭, 데이터 입력, 화면 로딩 등)를 했을 때
+            연결되는 이벤트 핸들러 함수에 선언된 내용이 수행되는 것
+        2. 이벤트 처리를 위한 구성요소
+            1) 이벤트가 일어날 대상 DOM 객체
+            2) 이벤트 내용 (클릭, 마우스 오버, 키입력 등)
+            3) 이벤트 핸들러 함수
+                -> 위 이벤트 발생시 처리할 내용을 선언한 함수를 말한다.
+        3. js에서 이벤트 처리 형식
+            1) <태그 on이벤트명="이벤트핸들러함수">
+                function 이벤트핸들러함수() {
+                    이벤트 핸들러 함수를 통해서 처리할 내용
+                }
+            2) <태그>
+                var domOb = document.querySelector("태그/선택자")
+                domOb.on이벤트명 = function() {
+                    // 익명 이벤트 핸들러 함수
+                }
+        4. 이벤트 종류
+            1) click : 마우스를 클릭시 발생
+            2) dblclick : 마우스를 두번 클릭시 발생
+            3) keyup / keydown : 키보드의 키를 입력시 발생
+                keyCode : 모든 키보드의 키는 고유의 키코드를 가지고 있다
+            4) mouseover / mouseout : 해당요소에 커서를 위치, 벗어났을때 발생
+            5) focus / blur : 특정요소 (주로 input형태의 태그)에 커서를 위치시키거나
+                다른곳에 위치 시켰을 때 발생
+        */
+    </script>
+
+    <!-- <h1 onclick="call1()">바로 이벤트 처리</h1>
+    <h1 onclick="call2('홍길동', 25)">매개변수 전달 이벤트 처리</h1>
+    <h1 onclick="call3({name:'사과', price:3000})">매개변수 전달(객체) 이벤트 처리</h1>
+
+    <script>
+        function call1() {
+            alert("안녕하세요")
+        }
+
+        function call2(name, age) {
+            console.log("매개변수 전달")
+            console.log("이름 : " + name)
+            console.log("나이 : " + age)
+        }
+
+        function call3(obj) {
+            console.log("객체 전달")
+            console.log("물건명 : " + obj.name)
+            console.log("가격 : " + obj.price)
+        }
+    </script> -->
+
+    <h2 onclick="click1()">클릭해보세요1</h2>
+    <h2 onclick="click2('자바의 정석', '길벗')">클릭해보세요2</h2>
+    <h2 onclick="click3({com:'인텔', cpu:'좋음', ram:'좋음'})">클릭해보세요3</h2>
+
+    <script>
+        function click1() {
+            console.log("반가워요")
+        }
+
+        function click2(book, com) {
+            console.log("책이름 : " + book)
+            console.log("회사 : " + com)
+        }
+
+        function click3(obj) {
+            console.log("회사 : " + obj.com)
+            console.log("cpu : " + obj.cpu)
+            console.log("ram : " + obj.ram)
+        }
+
+    </script>
+
+</body>
+</html>
