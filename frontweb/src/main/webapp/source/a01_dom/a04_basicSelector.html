@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="id01" class="cls01">홍길동</h2>
+    <h2 id="id02">김길동</h2>
+    <h2 id="id03" class="cls01">신길동</h2>
+</body>
+
+<script>
+    // 속성값이 id인 경우 (화면단위 단일 선택)
+    var id01Ob = document.querySelector("#id01")
+    var id02Ob = document.querySelector("#id02")
+    var id03Ob = document.querySelector("#id03")
+
+    id01Ob.align = "center"
+    id02Ob.align = "right"
+    id03Ob.innerText += " & 마길동"
+
+    var cls01Arr = document.querySelectorAll(".cls01")
+    for (var i = 0; i < cls01Arr.length; i++) {
+        cls01Arr[i].style.background = "pink"
+    }
+</script>
+</html>

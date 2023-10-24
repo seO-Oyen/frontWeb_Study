@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showAll(helloFun) {
+            alert("익명함수 전달 함수 처리")
+            helloFun() // 선언된 내용을 실행
+        }
+        showAll(function() { alert("익명함수 호출") })
+
+        // ex) callParam 함수를 매개변수로 greet를 전달하고
+        //      alert("안녕하세요 포함한 함수")
+        //      greet() 
+        function callParam(greet) {
+            alert("안녕하세요 포함한 함수")
+            greet()
+        }
+        callParam(function() { alert("안녕하세요") })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

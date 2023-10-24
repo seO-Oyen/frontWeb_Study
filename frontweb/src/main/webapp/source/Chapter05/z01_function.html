@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var plus = function(num01, num02) {
+            console.log(num01 + " + " + num02 + " = " + (num01 + num02))
+        }
+        plus(50, 5)
+
+        // ex) 물건 가격, 물건 갯수를 전달하여 물건가격 @@@, 물건 갯수 : @@ 총 비용 @@
+        function item(price, count) {
+            console.log("물건 가격 : " + price + ", 물건 갯수 : " + count + "\n총비용 : " + (price * count))
+        }
+        item(2000, 3)
+
+        // 선언적 함수 
+        function login(id, pass) {
+            var result = "로그인 실패"
+            if (id == 'himan' && pass == '7777') {
+                result = "로그인 성공 "
+            }
+            return result
+        }
+
+        var id = prompt("아이디 : ")
+        var pass =  prompt("패스워드 : ")
+        var logResult = login(id, pass)
+        console.log("로그인 결과 : " + logResult)
+
+        // ex) 매개변수로 밑면과 높이를 전달해서
+        //      리턴값으로 삼각형의 면적을 처리하는 함수를 선언하고
+        //      밑면과 높이를 promp창으로 입력받아 함수의 매개변수로 전달
+
+        var area = function(width, height) {
+            return width * height * 0.5
+        }
+        console.log("면적 : " +  area(prompt("밑면"), prompt("높이")))
+    </script>
+</body>
+</html>

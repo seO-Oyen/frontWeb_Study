@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        var person = {
+            name: '윤인성',
+            eat: function (food) { 
+                console.log(this.name + "이 " + food + "를 먹는다")
+            }
+        };
+        // 메서드를 호출합니다.
+        // person.eat('딸기');
+
+        var product = {
+            name : "사과",
+            price : 3000,
+            buy : function(cnt) {
+                console.log(this.name + "은 " + this.price + "원이고 " + cnt + "개 구매해서 총 "
+                + this.price * cnt + "원입니다")
+            }
+        }
+        product.buy(5)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        // # confirm() 
+        // 확인 : true, 취소 : false
+        var input = confirm('수락하시겠습니까?');
+        // 출력합니다.
+        alert(input);
+
+        // ex) 등록하시겠습니까? 확인 / 취소시 결과값을 출력하세요
+        var isOk = confirm("등록하시겠습니까?");
+        alert(isOk);
+
+        if (isOk) {
+            alert("등록 성공")
+        } else {
+            alert("등록 실패")
+        }
+
+        if (confirm("수정하시겠습니까?")) {
+            console.log("수정 진행 처리")
+        } else {
+            alert("수정취소 처리")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

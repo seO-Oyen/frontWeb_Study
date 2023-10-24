@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // var 변수는 지역변수 즉, 블럭내에 선언하더라도 다른 블럭에서 호출하여 사용
+        // 전역적으로 사용한다. 즉, 지역변수 / 전역변수 개념이 없게 처리된다.
+        // if, for, 함수 등 중괄호 블럭이 들어가는 곳에 다 해당한다.
+        {
+            // 스코프 A
+            var variable = 273;
+        }
+        {
+            // 스코프 B
+            alert(variable);
+        }
+        // 전역 스코프
+        alert(variable);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

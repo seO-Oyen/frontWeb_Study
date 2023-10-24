@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        # arguments 에 대한 이해
+
+        1. 여러가지 매개변수를 효율적으로 동적으로 처리하기 위한 내장된 객체
+        2. 
+            function buyList() {
+                var fruits = ""
+                for (var i = 0; arguments.length; i++) {
+                    fruits += arguments[i] + ", "
+                }
+                console.log("구매한 과일 : " + fruits)
+            }
+            buyList('사과')
+            buyList('사과', '바나나')
+            buyList('사과', '바나나', '오렌지')
+        3. 위와같은 함수명으로 여러가지 매개변수를 동적으로 처리할 때 필요로 하는 것을 arguments객체로 가능하다
+        */
+
+        function buyList() {
+            var fruits = ""
+            for (var i = 0; i < arguments.length; i++) {
+                fruits += arguments[i] + ", "
+            }
+            console.log("구매한 과일 : " + fruits)
+        }
+
+        // buyList("사과")
+        // buyList('사과', '바나나')
+        // buyList('사과', '바나나', '오렌지')
+
+        function totPoint() {
+            var sum = 0
+            var cnt = arguments.length
+            for (var i = 0; i < cnt; i++) {
+                sum += Number(arguments[i])
+            }
+            console.log("학생 " + cnt + "명의 총점은 " + sum + ", 평균은 " + (sum / cnt))
+        }
+        // totPoint(70)
+        // totPoint(70, 80)
+        // totPoint(70, 90, 60)
+
+        // ex) regMember 함수로 가입한 회원명단으로 출력하는 함수를 선언하고
+        //      여러 매개변수에 따라서 처리할 수 있게 처리하세요
+        //      회원1명, 회원3명, 회원 5명 아이디 입력
+
+        function regMember() {
+            console.log("회원 " + arguments.length + "명")
+            for (var i = 0; i < arguments.length; i++) {
+                console.log("회원 : " + arguments[i])
+            }
+        }
+        regMember('홍길동')
+        regMember('김길동', '신길동')
+        regMember('김철수', '오길동', '차길동')
+
+
+    </script>
+</body>
+</html>

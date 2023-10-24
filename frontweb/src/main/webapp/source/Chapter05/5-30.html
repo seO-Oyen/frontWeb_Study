@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 1초마다 함수를 실행합니다.
+        // setInterval(함수, 1/1000) : 해당 시간마다 반복할 내용
+        /*var intervalID = setInterval(function () {
+            alert('<p>' + new Date() + '</p>');
+        }, 1000);
+        // 10초 후 함수를 실행합니다.
+        setTimeout(function () {
+            // 타이머를 종료합니다.
+            clearInterval(intervalID);
+        }, 10000);*/
+
+        /*var cnt = 1;
+        var int01 = setInterval(function() {
+            document.write("카운트 : " + cnt++)
+            if (cnt == 11) {
+                // 카운트가 11이 되었을때 중단 처리
+                clearInterval(int01)
+            }
+        })*/
+
+        // ex) prompt로 구구단의 단수를 입력받아 1~9까지 곲한 값을 초단위로 출력하세요
+        var num = prompt("단수 입력")
+        var cnt = 1
+        var gugu = setInterval(() => {
+            document.write(num + ' X ' + cnt + ' = ' + num * cnt + '<br>')
+            cnt++
+
+            if (cnt == 10) {
+                clearInterval(gugu)
+            }
+        }, 1000);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

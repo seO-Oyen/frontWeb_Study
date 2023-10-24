@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        // js 에서 사용되는 데이터 유형
+        // 1. 문자열
+        var stringVar = 'String';
+        // 2. 숫자형 (실수. 정수)
+        var numberVar = 273;
+        // 3. boolean형
+        var booleanVar = true;
+        // 4. 함수형
+        /*
+        # js 의 함수형
+        1. 변수형
+        var 함수명 = function(매개변수1, 매개변수2, ...) {
+            프로세스 처리
+            return 리턴데이터;
+        }
+        함수명(데이터1, 데이터2, ...); //선언된 함수 호출
+
+        2. 선언적 함수 
+        function 함수명 (매개변수1, 매개변수2, ...) {
+            프로세스처리
+            return 리턴데이터;
+        }
+        var 리턴된데이터 할당 = 함수명(데이터1, 데이터2) // 선언된 함수
+        */
+        var functionVar = function () {
+            alert("함수 호출")
+            return "리턴한 문자열데이터"
+        };
+        // 객체형
+        var objectVar = {name : "홍길동", age : 25};
+
+        // js 에서 console 창에서 사용하는 출력처리
+        // typeof(변수명) : 데이터 유형
+        console.log(stringVar);
+        console.log(typeof(stringVar));
+        console.log(numberVar); console.log(typeof(numberVar));
+        console.log(booleanVar); console.log(typeof(booleanVar));
+        console.log(functionVar); console.log(typeof(functionVar));
+        console.log("함수호출 : " + functionVar)
+        console.log(objectVar); console.log(typeof(objectVar));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

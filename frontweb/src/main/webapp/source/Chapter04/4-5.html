@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 자바스크립트에서는 동적배열이 기본적으로 지원한다
+        // 배열을 생성합니다.
+        var array = [0, 1];
+        // 배열에 요소를 추가합니다.
+        array.push(2);
+        array.push(3);
+        array.push(4);
+        // 출력합니다.
+        alert(array);
+
+        var names = []
+        names.push('홍길동')
+        names.push('김길동')
+        names.push('신길동')
+        // 없는 index는 추가
+        names[3] = '마길동'
+        // 있는 index는 변경
+        names[0] = '하길동(변경)'
+
+        console.log("회원명 : " + names)
+
+        // ex) 학생들의 영어점수를 3명을 추가 메서드로 배열 선언후 처리하고
+        //     2번째 데이터를 변경, 4번째 데이터를 index로 추가 처리하세요
+        var eng = []
+        eng.push(30)
+        eng.push(50)
+        eng.push(83)
+        eng[1] = 52
+        eng[3] = 35
+
+        console.log(eng)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

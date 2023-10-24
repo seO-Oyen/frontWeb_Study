@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        /*
+        # javaScript의 함수
+
+        1. 데이터 유형이 할당으로 처리되기 때문에 매개변수에 타입에 대한 선언을 하지 않고
+            변수명으로 바로 선언하여 할당한다
+            ex)
+            // 선언
+            function plus(num01, num02) {
+                alert("첫번째 숫자 : " + num01)
+                alert("두번째 숫자 : " + num02)
+            }
+            // 호출
+            plus(25, 30)
+
+        2. 여러 유형의 데이터를 전달
+            // 배열
+            function paramArry(arry) {
+                alert("배열내용 : " + arry)
+            }
+
+            paramArray(['홍길동', '김길동', '신길동'])
+
+            // 객체
+            function paramObj(obj) {
+                for (var pro in obj) {
+                    alert(obj[pro])
+                }
+            }
+
+            paramObj({name:'홍길동', age:25, loc:'서울'})
+        */
+
+
+
+
+        // 변수를 생성합니다.
+        var 함수 = function() {
+            var output = prompt('숫자를 입력해주세요.', '숫자');
+            alert(output);
+        };
+        // 출력합니다.
+        alert(함수); // 함수가 정의 될 것을 출력
+        함수();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

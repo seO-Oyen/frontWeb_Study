@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 함수를 생성합니다.
+        function f(x) { return x * x; }
+        // 함수를 호출합니다.
+        alert(f(3));
+
+        function fun01(num01) {
+            return num01 + num01
+        }
+        alert(fun01(5))
+        var result = fun01(10)
+        alert("결과값 : " + result)
+
+        /*
+        ex) 매개변수로 아이디와 패스워드를 받아서 리턴값으로 3항 연산자를 이용해
+            himan / 7777 일때 로그인 성공 그 외는 로그인 실패를 리턴하여 alert 로 출력되게 하세요    
+        */
+
+        login("himan", "7779")
+        function login(id, pass) {
+            alert(id != "himan" ?  "로그인 실패" : (pass != "7777" ? "로그인 실패" : "로그인 성공"))
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

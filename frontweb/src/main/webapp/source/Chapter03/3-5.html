@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        var date = new Date();
+        var hour = date.getHours();
+        // if else if 조건문
+        /*
+        if (조건1) {
+
+        } else if (조건2) {
+
+        } else {
+
+        }
+        */
+        /*
+        if (hour < 11) {
+            // "hour < 11"이 참일 때 실행합니다.
+            alert('아침 먹을 시간입니다.');
+        } else if (hour < 15) {
+            // "hour < 11"이 거짓이고 "hour < 15"가 참일 때 실행합니다.
+            alert('점심 먹을 시간입니다.');
+        } else {
+            // "hour < 15"가 거짓일 때 실행합니다.
+            alert('저녁 먹을 시간입니다.');
+        }
+        */
+        // ex) var month = Math.floor(Math.random() * 12 + 1)
+        // 월에 따라 계절을 출력하세요
+        let month = Math.floor(Math.random() * 12 + 1);
+
+        if (month == 3 || month == 4 || month == 5) {
+            console.log("봄입니다")
+        } else if (month == 6 || month == 7 || month == 8) {
+            console.log("여름입니다")
+        } else if (month == 9 || month == 10 || month == 11) {
+            console.log("가을입니다")
+        } else {
+            console.log("겨울입니다")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

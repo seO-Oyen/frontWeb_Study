@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        # js에서 데이터 유형으로 function
+
+        1. 
+            var fun01 = function() {
+                alert('함수호출')
+            }
+            var fun99 = fun01
+        2. 함수의 실행/수행/호출
+            fun99();
+        */
+       // 정의
+        function fun01() {
+            alert("안녕하세요 함수")
+        }
+        function call01(fun01) {
+            alert('함수를 매개변수로 전달')
+            fun01();
+        }
+        // 호출
+        // call01(fun01)
+
+        function greet() {
+            alert("안녕하세요")
+        }
+        // greet();
+        var show = greet;
+        // show();
+
+        function showAll(show) {
+            alert("함수호출")
+            show()
+        }
+        showAll()
+        // 익명함수
+        showAll(function() {
+            alert('좋은하루')
+        })
+
+    </script>
+</body>
+</html>

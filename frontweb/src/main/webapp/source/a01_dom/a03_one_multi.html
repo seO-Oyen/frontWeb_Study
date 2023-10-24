@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        // a03_one_multi.html 초기내용을 다 시작으로 표현
+        // h1 1개 h2 5개 DOM으로 과일명 표현 출력 처리
+        window.onload = function() {
+            var h1Ob = document.querySelector("h1");
+            h1Ob.innerText = "사과";
+
+            var h2Arr = document.querySelectorAll("h2");
+            h2Arr[0].innerText = "딸기"
+            h2Arr[1].innerText = "오렌지"
+            h2Arr[2].innerText = "사과"
+            h2Arr[3].innerText = "포도"
+            h2Arr[4].innerText = "망고"
+            
+            for (var i = 0; i < h2Arr.length; i++) {
+                h2Arr[i].style.color = "blue";
+                h2Arr[i].align = "center";
+            }
+
+            /*
+            1. 하나밖에 없는 doucument.querySelectorAll("h2")
+            2. h2 여러개 있는 var h2Ob = document.querySelector(h2)
+                h2Ob.innerText
+            */
+            /* var h1Arr = document.querySelectorAll("h1");
+            h1Arr[0].innerText = "애플파인";
+
+            // 다중의 내용이 있지만, 1개만 선택해서 처리 (첫번째)
+            var h2Ob = document.querySelector("h2")
+            h2Ob.innerText = "첫번째 과일" */
+        }
+    </script>
+</head>
+<body>
+    <h1>시작</h1>
+    <h2>시작</h2>
+    <h2>시작</h2>
+    <h2>시작</h2>
+    <h2>시작</h2>
+    <h2>시작</h2>
+</body>
+</html>

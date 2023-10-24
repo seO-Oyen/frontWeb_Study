@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        var array = ['포도', '사과', '바나나', '망고'];
+        // for 반복문
+        for (var i = 0; i < array.length; i++) {
+            alert(array[i]);
+        }
+        /*
+        # 배열과 index, length
+        1. 배열은 index라는 키워드를 통해서 데이터를 하나씩 접근할 수 있다.
+            array[0] : 첫번째 데이터 '포도'를 가지고 온다
+            array[1] : 두번째 데이터 '사과'를 가지고 온다
+            array[2] : 세번째 데이터 '바나나'를 가지고 온다
+        2. 배열명.length : 배열의 길이를 가져올 수 있다.
+            array.length : 4
+        3. 배열의 index와 length의 관계
+            배열의 마지막 index =  배열의.length - 1
+
+        # 배열과 반복문
+        1) 기본 for구문
+            배열의 첫번째 index가 0
+            배열의 최종 index는 배열.length - 1
+            이것을 for문에 적용하면
+            for (var i = 0; i < 배열.length; i++) {
+                배열[i] : 배열의 구성요소를 접근할 수 있다.
+            }
+
+        2) for in 구문
+            var array = ['포도', '사과', '바나나', '망고']
+            for (var i in array) {
+                console.log(array[i]) : 하나씩 가져온다
+            }
+
+        3) 배열.forEach(function(index, data) {
+
+        })
+
+        # 객체와 for in 구문(참고 객체할때 자세히 진행)
+        var p01 = {name : "홍길동", age : 25}
+        p01.name : 홍길동
+        p01.age : 25
+
+        for (var prop in p01) {
+            prop : 객체안에 속성을 가져온다
+            p01[prop] : 객체의 속성값을 가져온다
+            console.log(prop + " : " + p01[prop])
+            name : 홍길동
+            age : 25
+        }
+
+        ps) for (var i in array) {
+            @배열이가 객체는 구성요소가 index 속성이므로 for in 구문에서 같은 패턴으로 접근하여 가져온다
+        }
+
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

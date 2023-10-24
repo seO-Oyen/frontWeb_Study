@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 입력을 위한 창
+        // prompt("설명내용", "초기값설정")
+        // 문자열 데이터를 입력받을 수 있음
+        // var fruit = prompt("과일입력", "사과");
+
+        // console.log(fruit);
+
+        // 2. 연산 데이터 입력
+        var pt = prompt("국어점수 입력", "0")
+        var pt2 = prompt("영어점수입력", "0")
+        alert(pt + pt2) // 문자열이기 때문에 나열이 된다.
+
+        // 3. 연산 데이터 입력 (숫자변환1)
+        var pt = prompt("국어점수 입력", "0") * 1
+        var pt2 = prompt("영어점수입력", "0") * 1
+        alert(pt + pt2) // 문자열이기 때문에 나열이 된다.
+
+        // 4. 연산 데이터 입력 (숫자변환2)
+        var pt = Number(prompt("국어점수 입력", "0"))
+        var pt2 = Number(prompt("영어점수입력", "0"))
+        alert(pt + pt2) // 문자열이기 때문에 나열이 된다.
+
+        // # js 에서는 + 만 연산시 형변환 필용
+        // 다른 연산시에는 자동 형변환처리된다.
+
+        // ex) prompt, Number() 를 활용하여 나이를 입력받아 10년후 나이를 출력하세요
+        var age = Number(prompt("나이를 입력하세요", 0))
+        console.log("10년 후 나이 : " + (age + 10))
+
+    </script>
+</body>
+</html>

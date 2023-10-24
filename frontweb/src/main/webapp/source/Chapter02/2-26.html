@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // window : 브라우저의 로딩된 창을 나타내는 객체
+        // .oload : 로딩을 하면 이라는 이벤트 처리
+        // = function() {} : 이벤트로 처리해야할 내용
+        // BOM(Brower Object Model)
+        window.onload = function () {
+            // 변수를 선언합니다.
+            var list = '';
+            // 연산자를 사용합니다.
+            list += '<ul>';
+            list += '    <li>Hello</li>';
+            list += '    <li>JavaScript..!</li>';
+            list += '</ul>';
+            // 문서에 출력합니다.
+            // DOM(Document Object Model)
+            // document.body : dom 중에서 body 태그를 지칭하고
+            // innerHTML : 화면에 출력할 내용을 지정 (태그를 랜더링) 
+            // innerText : 화면에 출력할 내용을 지정
+            document.body.innerHTML = list;
+        };
+    </script>
+</head>
+<body>
+    <h2>안녕</h2>
+
+</body>
+</html>

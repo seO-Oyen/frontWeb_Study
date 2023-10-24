@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>시작</h2>
+    <h3>빨강</h3>
+    <h3>파랑</h3>
+    <h3>노랑</h3>
+</body>
+
+<script>
+    /*
+    # javaScript의 선택자
+
+    1. javaScript는 선택자 DOM 객체를 선택할 때, 사용하는 객체/메서드는
+        아래와 같다.
+        - var obj = document.querySelector("단일선택자")
+        - var arry = document.querySelectorAll("다중선택자")
+        단일과 다중으로 body 안에 있는 태그들을 선택할 수 있다.
+    2. 선택자의 종류 (css에서 선택자와 동일개념)
+        1) 기본 태그 <h1>, <img>
+            - querySelector("h1")
+            - querySelector("img")
+        2) 속성 id가 있을 때
+            - 태그명에 속성으로 id값이 지정되어 있을때 사용
+            - id는 한 화면의 1개의 식별자로 구분할 때 사용
+            - <h2 id="showTitle">
+            - querySelector("#showTitle")
+            => id 속성으로 지정된 태그는 #아이디명 으로 선택하여 
+                지정할 수 있다.
+        3) 속성 class가 있을때
+            <h2 class="cls01">
+            <h2>
+            <h3 class="cls01">
+            <h2 class="cls02">
+            <h4 class="cls01">
+            querySelectorAll(".cls01") => 배열
+        4) 기타 복합내용
+    */
+
+   var h2Ob = document.querySelector("h2")
+   // innerText : 레이블 내용을 변경 / 저장
+   h2Ob.innerText = "단일 객체 내용 변경"
+   
+   var h3Arr = document.querySelectorAll("h3") // 배열로 인식
+   h3Arr[0].innerText = "red"
+   h3Arr[1].innerText += "blue"
+   h3Arr[2].innerText = "yellow"
+
+   // a03_one_multi.html 초기내용을 다 시작으로 표현
+   // h1 1개 h2 5개 DOM으로 과일명 표현 출력 처리
+
+</script>
+
+</html>

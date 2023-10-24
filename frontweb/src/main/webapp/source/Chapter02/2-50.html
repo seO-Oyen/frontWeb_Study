@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // js에서는 자동형변환이 많기 때문에 이를 검증해주기위해서
+        // ===를 이용해서 데이터 유형과 같은지 여부를 확인하는 비교 연산자가 있다.
+        // !== 같지 않으면 == 형변환 후 같은지 여부를 확인
+
+        console.log('' == 1)
+        console.log('' == true)
+        console.log(1 == true) // 자동 형 변환후 비교
+        console.log(1 === true) // 타입이 같은지 확인 후 데이터 비교
+        console.log('25' == 25)
+        console.log('25' === 25)
+        
+        /*
+        alert('' === false);
+        alert('' === 0);
+        alert(0 === false);
+        alert('273' === 273);
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

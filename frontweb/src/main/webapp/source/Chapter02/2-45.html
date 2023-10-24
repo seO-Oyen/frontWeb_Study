@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        var input = prompt('숫자를 입력해주세요.', '숫자');
+        // Number() : 명시적으로 형변환 처리(함수) 숫자형 변환
+        var numberInput = Number(input);
+        // var numberInput = Number(prompt("숫자데이터", "0")) // 이중함수 처리
+        // 출력합니다.
+        alert(typeof (numberInput) + ': ' + numberInput);
+
+        // # js에서 숫자형 문자열인 경우 + 만 형변환이 필요하고 그 외에는 형변화 처리하지 않더라도 자동 형변환으로 연산이 가능하다
+
+        // ex) prompt, Number() 를 활용하여 나이를 입력받아 10년후 나이를 출력하세요
+        var age = Number(prompt("나이를 입력하세요"))
+        console.log("10년 후 나이 : " + (age + 10))
+    </script>
+</head>
+<body>
+
+</body>
+</html>

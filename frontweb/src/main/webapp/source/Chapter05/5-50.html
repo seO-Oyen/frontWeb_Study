@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        /*
+        # 화살표 함수
+        1. 간단한 함수를 처리할때 활용
+        2. 형식
+            1)선언
+            함수명 = (매개변수1, 매개변수2..) => 리턴값;
+            2) 호출
+            함수명(데이터1, 데이터2)
+        */
+        // 함수를 선언합니다.
+        const multiply = (a, b) => a * b;
+        // 사용합니다.
+        // alert(multiply(1, 2));
+        // alert(multiply(3, 4));
+
+
+        const buyTot = (price, cnt) => price * cnt
+        var price = 3000
+        var cnt = 2
+        // document.write("물건가격 : " + price)
+        // document.write("<br>구매갯수 : " + cnt)
+        // document.write("<br>총계 : " + buyTot(price, cnt))
+
+        // ex) 원의 면적으로 구하는 함수를 화살표 함수로 정의해서 반지름이 입력되었을 때 결과를 리턴하게 
+        const area = (r) => r * r * 3.14
+        var r2 = 2
+        document.write("원 면적 : " + area(r2))
+
+    </script>    
+</head>
+<body>
+
+</body>
+</html>

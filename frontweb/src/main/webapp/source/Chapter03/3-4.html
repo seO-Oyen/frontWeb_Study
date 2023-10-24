@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        /*
+        var date = new Date();
+        var hour = date.getHours();
+        // 중첩 조건문
+        if (hour < 11) {
+            // "hour < 11"이 참일 때 실행합니다.
+            alert('아침 먹을 시간입니다.');
+        } else {
+            // "hour < 11"이 거짓일 때 실행합니다.
+            if (hour < 15) {
+                // "hour < 15"가 참일 때 실행합니다.
+                alert('점심 먹을 시간입니다.');
+            } else {
+                // "hour < 15"가 거짓일 때 실행합니다.
+                alert('저녁 먹을 시간입니다.');
+            }
+        }
+        */
+        
+        /*
+        ex) 중첩조건으로 회원가입시 id / pass / age 입력, id / pass 입력을 1차조건으로 입력여부 check하고
+        age가 18세이상 여부에 따라 성년 / 미성년 회원으로 구분하여
+        1차조건이 안될시 : 아이디 / 패스워드 입력하세요
+        2차조건에 따라 성년 회원가입 성공
+                        미성년 회원가입성공 처리하세요
+        */
+        // if != "" && pass != ""  => 입력을 반드시 해야하고
+        // id != null && pass != null => 둘다 취소버튼을 클릭하지 않을 시
+        let id = prompt("id를 입력하세요");
+        let pass = prompt("비밀번호를 입력하세요");
+        let age = Number(prompt("나이를 입력하세요"));
+
+        if (id == "" || pass == "") {
+            console.log("아이디 / 패스워드 입력하세요")
+        } else {
+            if (age != "" && age != null) {
+                if (age >= 18) {
+                    console.log("성년 회원가입 성공")
+                } else {
+                    console.log("미성년 회원가입 성공")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

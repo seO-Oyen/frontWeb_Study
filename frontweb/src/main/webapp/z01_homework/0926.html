@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// # 아래 내용을 javascript 문제로 처리해주세요
+// [개념] 1. var, let, const 변수형식의 차이점을 예제를 통해서 기술하세요
+// [확인] 2. 위 let 변수를 이용해서 for문의 1~10까지 합산을 alert으로 출력하세요 
+// [토론] 3. 기본 if문, if else문, if else if문의 형식과 차이를 기본예제를 통해 설명하세요
+// 	 조원들과 의견을 나누고 결론을 정리하여 제출하세요.
+// [토론] 4. 프로그램에서 전역변수와 지역변수의 사용의 필요성에 대하여 의견을 나누어 보세요
+// [확인] 5. 아래 내용을 중첩 조건문을 사용하여 처리해보세요
+
+// 1. **음식 선택 가이드**:
+//    사용자의 기분과 시간에 따라 다른 음식을 추천해주는 시스템을 만들어보세요.
+//    **조건**:
+//    - 기분: `hungry`, `sad`, `happy`
+//    - 시간: `morning`, `afternoon`, `evening`
+
+//    **도표**:
+   
+//    | 기분   | 시간       | 추천 음식               |
+//    |-------|-----------|------------------------|
+//    | hungry| morning   | Breakfast burrito      |
+//    | hungry| afternoon | Chicken Sandwich       |
+//    | hungry| evening   | Spaghetti              |
+//    | sad   | morning   | Pancakes with syrup    |
+//    | sad   | afternoon | Ice Cream              |
+//    | sad   | evening   | Chocolate Cake         |
+//    | happy | morning   | Fruit Salad            |
+//    | happy | afternoon | Sushi Roll             |
+//    | happy | evening   | Grilled Salmon         |
+
+// ---
+
+// 2. **여행지 추천**:
+   
+//    계절과 활동 선호도에 따라 여행지를 추천해주세요.
+
+//    **조건**:
+//    - 계절: `summer`, `winter`
+//    - 활동: `adventure`, `relax`
+
+//    **도표**:
+
+//    | 계절  | 활동       | 여행지               |
+//    |-------|-----------|----------------------|
+//    | summer| adventure | Beach surfing        |
+//    | summer| relax     | Tropical resort      |
+//    | winter| adventure | Skiing in the Alps   |
+//    | winter| relax     | Cabin by a fireplace |
+
+// ---
+
+// 3. **책 추천**:
+   
+//    사용자의 연령과 선호하는 장르에 따라 책을 추천해주세요.
+
+//    **조건**:
+//    - 연령: `kid`, `teen`, `adult`
+//    - 장르: `fantasy`, `mystery`
+
+//    **도표**:
+
+//    | 연령  | 장르       | 책                  |
+//    |-------|-----------|---------------------|
+//    | kid   | fantasy   | Harry Potter        |
+//    | kid   | mystery   | Nancy Drew          |
+//    | teen  | fantasy   | Percy Jackson       |
+//    | teen  | mystery   | Sherlock Holmes     |
+//    | adult | fantasy   | Game of Thrones     |
+//    | adult | mystery   | The Da Vinci Code   |
+// ---
+// [확인] 6. 아래 내용을 if else if 조건문을 사용하여 처리해보세요
+// 1. **음악 장르 추천**:
+//    사용자의 나이에 따라 음악 장르를 추천해보세요.
+//    **조건**: 나이
+//    **도표**:
+//    | 나이      | 추천 장르       |
+//    |----------|--------------|
+//    | 0-10     | Kids Music   |
+//    | 11-20    | Pop          |
+//    | 21-30    | Rock         |
+//    | 31-50    | Jazz         |
+//    | 50+      | Classical    |
+
+// ---
+
+// 2. **음료 선택**:
+
+//    현재 시간에 따라 음료를 추천해주세요.
+
+//    **조건**: 현재 시간 (24시간 형식)
+
+//    **도표**:
+
+//    | 시간      | 추천 음료     |
+//    |---------|------------|
+//    | 0-6     | Warm Milk  |
+//    | 7-10    | Coffee     |
+//    | 11-14   | Juice      |
+//    | 15-20   | Tea        |
+//    | 21-24   | Water      |
+
+// ---
+
+// 3. **활동 추천**:
+   
+//    날씨에 따른 야외 활동을 추천해주세요.
+
+//    **조건**: 날씨 (sunny, rainy, cloudy)
+
+//    **도표**:
+
+//    | 날씨     | 추천 활동        |
+//    |--------|--------------|
+//    | sunny  | Picnic       |
+//    | rainy  | Indoor games |
+//    | cloudy | Photography  |	
+/*
+
+[개념] 1. var, let, const 변수형식의 차이점을 예제를 통해서 기술하세요
+
+```javascript
+// var: function-scope
+function exampleVar() {
+  if (true) {
+    var x = 5;  // x can be accessed outside this block
+  }
+  console.log(x);  // Outputs: 5
+}
+
+// let: block-scope
+function exampleLet() {
+  if (true) {
+    let y = 10;  // y can NOT be accessed outside this block
+  }
+  // console.log(y);  // Error: y is not defined
+}
+
+// const: block-scope + constant (can't be reassigned)
+function exampleConst() {
+  const z = 20;
+  // z = 30;  // Error: Assignment to constant variable
+}
+```
+
+[확인] 2. 위 let 변수를 이용해서 for문의 1~10까지 합산을 alert으로 출력하세요 
+
+```javascript
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+  sum += i;
+}
+alert(sum);  // Outputs: 55
+```
+
+[토론] 3 
+
+
+3. 기본 if문, if else문, if else if문의 형식과 차이:
+   
+- **if문**:
+  가장 기본적인 조건문으로, 주어진 조건이 참일 경우 해당 블록 내의 코드를 실행합니다.
+```javascript
+if (condition) {
+  // 코드 실행
+}
+```
+예제:
+```javascript
+let number = 5;
+if (number > 0) {
+  console.log("The number is positive.");
+}
+```
+
+- **if else문**:
+  if 조건이 참일 경우 첫 번째 블록의 코드를 실행하고, 거짓일 경우 else 블록의 코드를 실행합니다.
+```javascript
+if (condition) {
+  // 코드 실행
+} else {
+  // 다른 코드 실행
+}
+```
+예제:
+```javascript
+let number = -3;
+if (number > 0) {
+  console.log("The number is positive.");
+} else {
+  console.log("The number is not positive.");
+}
+```
+
+- **if else if문**:
+  여러 조건을 체크할 때 사용합니다. 첫 번째 조건이 참이면 해당 블록을 실행하고, 거짓일 경우 다음 else if 조건을 검사합니다. 모든 조건이 거짓일 때는 마지막 else 블록을 실행합니다.
+```javascript
+if (condition1) {
+  // 코드 실행
+} else if (condition2) {
+  // 다른 코드 실행
+} else {
+  // 그 외의 경우 코드 실행
+}
+```
+예제:
+```javascript
+let number = 0;
+if (number > 0) {
+  console.log("The number is positive.");
+} else if (number < 0) {
+  console.log("The number is negative.");
+} else {
+  console.log("The number is zero.");
+}
+```
+[토론] 4 전역변수와 지역변수의 사용의 필요성:
+
+- **전역변수**:
+  스크립트나 프로그램 전체에서 접근 가능한 변수입니다. 주요 필요성은 데이터를 다양한 함수나 블록에서 공유해야 할 경우 사용됩니다. 하지만 남용하면 코드의 가독성과 유지보수가 어려워질 수 있습니다.
+
+예제:
+```javascript
+let globalVar = "I'm a global variable.";
+
+function displayGlobalVar() {
+  console.log(globalVar);  // 전역변수에 접근 가능
+}
+displayGlobalVar();
+```
+
+- **지역변수**:
+  특정 함수 또는 블록 내에서만 사용되는 변수입니다. 주요 필요성은 임시 데이터 저장, 함수 내에서의 데이터 처리, 전역 변수와의 충돌 방지 등입니다. 지역 변수는 해당 함수나 블록이 종료될 때 메모리에서 해제됩니다, 따라서 메모리 관리에도 효율적입니다.
+
+예제:
+```javascript
+function displayLocalVar() {
+  let localVar = "I'm a local variable.";
+  console.log(localVar);  // 지역변수에 접근 가능
+}
+displayLocalVar();
+// console.log(localVar);  // 오류: localVar는 지역변수이기 때문에 함수 외부에서 접근 불가
+```
+
+전역변수는 필요할 때만 사용하고, 가능한 지역변수를 활용하여 코드의 복잡성을 줄이는 것이 좋습니다.
+
+[확인] 5. 
+
+```javascript
+// 음식 선택 가이드:
+let mood = prompt("How do you feel? (hungry/sad/happy)");
+let time = prompt("What time is it? (morning/afternoon/evening)");
+
+if (mood === "hungry") {
+  if (time === "morning") alert("Breakfast burrito");
+  else if (time === "afternoon") alert("Chicken Sandwich");
+  else if (time === "evening") alert("Spaghetti");
+} else if (mood === "sad") {
+  if (time === "morning") alert("Pancakes with syrup");
+  else if (time === "afternoon") alert("Ice Cream");
+  else if (time === "evening") alert("Chocolate Cake");
+} else if (mood === "happy") {
+  if (time === "morning") alert("Fruit Salad");
+  else if (time === "afternoon") alert("Sushi Roll");
+  else if (time === "evening") alert("Grilled Salmon");
+}
+// 위와 같은 방식으로 여행지 추천 및 책 추천도 처리할 수 있습니다.
+```
+
+[확인] 6.
+
+```javascript
+// 음악 장르 추천:
+let age = parseInt(prompt("How old are you?"));
+if (age >= 0 && age <= 10) alert("Kids Music");
+else if (age >= 11 && age <= 20) alert("Pop");
+else if (age >= 21 && age <= 30) alert("Rock");
+else if (age >= 31 && age <= 50) alert("Jazz");
+else alert("Classical");
+
+// 음료 선택:
+let hour = new Date().getHours();
+if (hour >= 0 && hour <= 6) alert("Warm Milk");
+else if (hour >= 7 && hour <= 10) alert("Coffee");
+else if (hour >= 11 && hour <= 14) alert("Juice");
+else if (hour >= 15 && hour <= 20) alert("Tea");
+else alert("Water");
+
+// 활동 추천:
+let weather = prompt("What's the weather like? (sunny/rainy/cloudy)");
+if (weather === "sunny") alert("Picnic");
+else if (weather === "rainy") alert("Indoor games");
+else if (weather === "cloudy") alert("Photography");
+```
+
+
+*/	
+</script>
+</head>
+<body>
+
+</body>
+</html>

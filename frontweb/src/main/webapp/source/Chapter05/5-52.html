@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function test(...numbers) {
+            alert(numbers[0]);
+            alert(numbers[1]);
+            alert(numbers[2]);
+        }
+        // test(1, 2, 3);
+        // test(10, 20, 30);
+        // test('사과', '바나나', '딸기');
+
+        function buyProd(...prods) {
+            console.log("구매한 물건들 : " + prods)
+        }
+        // buyProd("사과")
+        // buyProd("사과", "바나나")
+        // buyProd("사과", "바나나", "딸기")
+
+        // ex) 학생의 점수를 합산해서 출력하세요
+        //      @@ 명의 학생 평균점 @@
+
+        function score(...score) {
+            var sum = 0
+            for (var i = 0; i < score.length; i++) {
+                sum += score[i];
+            }
+            console.log(score.length + "명의 학생  평균점 : " + sum / score.length)
+        }
+
+        score(10, 20, 30)
+        score(11, 12, 5, 7)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
