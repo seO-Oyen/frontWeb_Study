@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h2>red</h2>
+    <h2>red</h2>
     <h2>orange</h2>
     <h2>yellow</h2>
     <h2>green</h2>
@@ -22,32 +22,6 @@
         for (var i = 0; i < h2Ob.length; i++) {
             h2Ob[i].onclick = function() {
                 pOb.style.color = this.innerText
-            }
-        }
-    </script> -->
-
-    <!-- 
-        ex) ol li 로 판매하는 물건 리스트를 출력
-        사과 바나나 딸기 오렌지 수박
-        li를 클릭시 해당 물건명을 하단에 장바구니 리스트(p)에 h4로 계속 누적되게 추가
-    -->
-
-    <ol>
-        <li>사과</li>
-        <li>바나나</li>
-        <li>딸기</li>
-        <li>오렌지</li>
-        <li>수박</li>
-    </ol>
-
-    <p>장바구니</p>
-
-    <script>
-        var liOb = document.querySelectorAll("li")
-
-        for (var i = 0; i < liOb.length; i++) {
-            liOb[i].onclick = function() {
-                document.querySelector("p").innerText += "\n" + this.innerText
             }
         }
     </script>
