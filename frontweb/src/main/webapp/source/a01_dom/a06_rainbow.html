@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>red</h2>
+    <h2>orange</h2>
+    <h2>yellow</h2>
+    <h2>green</h2>
+    <h2>blue</h2>
+    <h2>navy</h2>
+    <h2>purple</h2>
+    <p>무지개 색상</p>
+
+    <script>
+        var h2Ob = document.querySelectorAll("h2")
+        var pOb = document.querySelector("p")
+
+        for (var i = 0; i < h2Ob.length; i++) {
+            h2Ob[i].onclick = function() {
+                pOb.style.color = this.innerText
+            }
+        }
+    </script>
+</body>
+</html>
