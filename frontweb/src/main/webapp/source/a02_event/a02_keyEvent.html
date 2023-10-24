@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        # key와 함께하는 DOM 이벤트
+
+        1. key 이벤트는 일반적으로 키보드를 입력시 발생하는 이벤트를 말한다.
+        2. key 이벤트의 대상 객체
+            - window (BOM) : 화면 전체를 대상으로 이벤트 처리
+            - input / select / textarea : 입력을 처리하는 요소 객체를 대상으로 한다.
+                입력시 데이터 값에 따른 처리를 말한다.
+        3. key 이벤트의 종류와 속성 / 속성값
+            - keyup : 키를 눌렀다가 놓았을 때 (다시 복구가 된 상태)
+            - keydown : 키를 누른 상태
+            - event.keyCode(대소문자 구분) : 각 키보드의 키에 연결된 값들
+        */
+
+        console.log("# 이벤트 대상 확인1 #")
+        console.log(this)
+
+        this.onkeyup = function() {
+            console.log("눌러진 키 코드")
+            console.log(event.keyCode)
+            document.body.innerHTML = "<h2 align='center'>" + event.keyCode + "</h2>"
+        }
+
+        window.onload = function() {
+            console.log("# 이벤트 대상 확인2 #")
+            console.log(this)
+        }
+    </script>
+</body>
+</html>
