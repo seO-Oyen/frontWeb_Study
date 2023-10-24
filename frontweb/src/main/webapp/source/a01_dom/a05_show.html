@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>출력 1</h1>
+    <div>
+        <h1>포함태그</h1>
+        <p>문단 내용</p>
+    </div>
+    <script>
+        var h1Ob = document.querySelector("h1")
+        // .innerText : 내용 그대로 표현할 때
+        h1Ob.innerText = "내용만 변경합니다. <span>태그 그대로 나오죠</span>"
+
+        var divOb = document.querySelector("div")
+        // .innerHTML : html 태그 랜더링시 처리
+        divOb.innerHTML="<ul><li>사과</li><li>바나나</li><li>딸기</li></ul>"
+
+        var pOb = document.querySelector("p")
+        h1Ob.onclick = function() {
+            var addData = "<h2>맛있는 사과</h2>"
+            divOb.innerHTML += addData
+            pOb.innerText += addData
+        }
+    </script>
+</body>
+</html>
