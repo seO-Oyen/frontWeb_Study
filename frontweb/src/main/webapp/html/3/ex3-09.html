@@ -6,10 +6,15 @@
 <body>
 <h3>먹고 싶은 것 모두 체크하세요</h3>
 <hr>
+<!-- type="check" : 여러가지를 선택 가능하다 -->
 <form>
-	짜장면 <input type="checkbox" value="1">
-	짬뽕 <input type="checkbox" value="2" checked>
-	탕수육 <input type="checkbox" value="3">
+	짜장면 <input type="checkbox" value="1" name="menu">
+	<!-- default로 checked 되어있는 내용 -->
+	짬뽕 <input type="checkbox" value="2" name="menu" checked>
+	탕수육 <input type="checkbox" value="3" name="menu">
+
+	<input type="submit">
+	<!-- submit으로 서버로 전송할 때, check한 것만 전송이 됨 -->
 </form>
 </body>
 </html>

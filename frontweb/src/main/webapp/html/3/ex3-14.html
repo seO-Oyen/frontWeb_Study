@@ -6,7 +6,31 @@
 <body>
 <h3>컬러다이얼로그로 색 입력</h3>
 <hr>
+<!--  
+	# 이벤트 onchange="자바스크립트코드"
+	1. onchange : 해당 객체의 값을 변경시
+	2. document.body.style.color
+		document.body.style.color : 화면의 body 태그 부분에
+			글자 색상 할당
+		- this.value : 이벤트가 일어나 객체 this의 value로 설정
+-->
 <form>
+<h2>여기값</h2>
+이름 변경 : <select type="text" onchange="call(this)">
+		<option>홍길동</option>
+		<option>김길동</option>
+		<option>신길동</option>
+	</select>
+<script>
+	function call(obj) {
+		console.log("# 변경할 때 이벤트 #")
+		console.log(obj.value)
+		var h2Ob = document.querySelector("h2")
+		h2Ob.innerHTML = obj.value
+		console.log("# 상당 h2 레이블 #")
+		console.log(h2Ob.innerHTML)
+	}
+</script>
 색 선택 <input type="color" value="#00BFFF"
 	onchange="document.body.style.color=this.value"> 
 </form>

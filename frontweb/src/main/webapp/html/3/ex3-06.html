@@ -6,10 +6,96 @@
 <body>
 <h3>자기 소개서 작성</h3>
 <hr>
+<!-- 
+    # form 태그 하위의 여러가지 폼 요소들
+    1. input
+        1)기본 형식
+            <input type="속성값" name="이름" value="할당된 값">
+        2) 여러가지 속성 값 type="속성값"
+            - text : 한줄 텍스트 입력 창
+            - password : 암호 입력을 위한 한줄 테스트 입력창
+            - button : 단순한 버튼
+            - submit : 웹 서버로 폼 데이터를 전송시키는 버튼
+            - image : 이미지 버튼
+            - checkbox : 다중으로 선택할 수 있는 선택 box
+            - radio : 여러개중에 단일 선택할 수 있는 선택 box
+            == 기타 고급 html 속성(html5 이후) ==
+            - month|week|date|time|datatime-local 
+                : 년/월/일/시간 등의 시간 정보 입력창
+            - number|range : 스핀 버튼과 슬라이드바로 편리한 숫자 입력창
+            - color : 색 입력을 쉽게하는 컬러 다이얼로그
+            - email|url|tel|search : 이메일 url 전화번호 검색 키워드
+                형식 검사 기능을 가진 텍스트 입력 창
+            - file : 로컬 컴퓨터의 파일을 선택하는 폼 요소
+    2. select
+        option : 다일/다중을 선택할 때 주로 사용
+        ex) select
+                option
+                option
+                option
+    3. button
+        <button type="button">버튼1</button>
+        <button type="submit">버튼2</button>
+        <button type="reset">버튼3</button>
+    4. textarea
+        rows, cols 속성으로 여러줄의 텍스트 입력창을 처리한다.
+-->
+<h2>기타 form 형식들</h2>
+
+여러가지 버튼 형식 :
+<button>버튼(default type=submit)</button>
+<button type="submit">버튼 (submit 서버에 전송됨)</button>
+<button type="button">버튼 (버튼기능으로 서버 전송안됨)</button>
+<button type="reset">버튼(form하위에 데이터 초기화)</button><br>
+
+다중의 행 데이터 입력 :
+<textarea cols="10" rows="5">입력할 내용</textarea>
+
+단일 선택 :
+<select>
+    <option>사과</option>
+    <option>바나나</option>
+    <option>딸기</option>
+    <option>오렌지</option>
+</select>
+
+다중선택
+<select size="3" multiple>
+    <option>사과</option>
+    <option>바나나</option>
+    <option>딸기</option>
+    <option>오렌지</option>
+</select>
+
+<h2>여러가지 input type 모양</h2>
+text : <input type="text" size="3">
+pass : <input type="password" value="9999">
+button : <input type="button" value="클릭">
+submit : <input type="submit">
+reset : <input type="reset">
+image : <input type="image" src="media/button.png">
+checkbox : <input type="checkbox" name="ck"> <input type="checkbox" name="ck"> 
+    <input type="checkbox" name="ck">
+radio : <input type="radio" name="rd"> <input type="radio" name="rd">
+    <input type="radio" name="rd">
+date : <input type="date">
+color : <input type="color">
+range : <input type="range">
+file : <input type="file">
+
+<!-- 입력 내용을 form하위에 위치한다. -->
+<h2>서버에 전송할 form</h2>
 <form>
 이름 : <input type="text" value=""><br>
 암호 : <input type="password" value="" maxlength="4"><br>
 자소서 : <textarea cols="20" rows="5">이곳에 자기소개서 작성</textarea>
+<input type="submit">
+<input type="reset">
 </form>
+<!--
+    ex3-06.html?name01=홍길동&pwd=8888&cont=이곳에+자기소개서+작성%28내용입력
+    action에 지정한 곳으로 입력한 데이터가 전송이 된다.
+    action이 없으면 현재 페이지를 호출한다.
+-->
 </body>
 </html>

@@ -25,5 +25,36 @@
 </ul>
 <hr>
 <a href="ex2-17.html">예제 2-17로 이동</a>
+<a href="javascript:gogo()">내부페이지 이동</a>
+<img ondblclick="gogo()" src="media/iconchosun.png" alt="조선일보">
+<h2 onclick="gogo()">자바스크립트 함수 호출 이동</h2>
+
+<script>
+	function gogo() {
+		//이동 여부에서 확인을 누를 때만 이동 처리
+		if (confirm("페이지를 이동하겠습니까?")) {
+			// location : 내장객체
+			// href : 이동할 속성
+			location.href="ex2-17.html"
+		}
+	}
+	/*
+	# 페이지 이동처리
+	1. 기본 페이지 이동
+		<a href="이동할 페이지 (내부페이지/외부페이지)">텍스트 표기</a>
+		해당 텍스트 클릭스 특정 페이지 이동
+	2. 이미지 클릭으로 페이지 이동
+		<a href="이동할 페이지 (내부페이지/외부페이지)">
+			<img src="이미지">
+		</a>
+	3. javascript로 페이지 이동 처리
+	4. DOM 객체로 페이지 이동
+		ex) z03_link.html
+		이벤트 핸들러 함수를 선언하고 location.href를 이용해서
+		1) a href="javascript:이동함수()"
+		2) h1 이벤트명=이벤트함수() 형식으로 이동되게 하세요
+	*/
+</script>
+
 </body>
 </html>

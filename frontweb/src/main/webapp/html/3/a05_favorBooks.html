@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        좋아하는 도서 : <input type="text" name="book">
+        <input type="button" value="추가" id="sbBtn">
+
+        <div id="show">
+
+        </div>
+
+        <h2>도서 목록(key이벤트)</h2>
+        <table id="bookTab" border width="300">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>도서명</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </form>
+    <script>
+        var book = document.querySelector("[name=book]")
+        var sbBtn = document.querySelector("#sbBtn")
+        var show = document.querySelector("#show")
+        var table = document.querySelector("#bookTab tbody")
+
+        var cnt = 1
+        book.onkeyup = function() {
+            if(event.keyCode == 13) {
+                table.innerHTML += "<tr><th>" + (cnt++) + "</th><th>"
+                    + this.value + "</th></tr>"
+                this.value = ""
+                this.focus()
+            } 
+        }
+
+        show.innerHTML = "<h2>좋아하는 도서</h2>"
+        sbBtn.onclick = function() {
+            show.innerHTML += book.value + "<br>"
+            book.value = ""
+            book.focus()
+        }
+    </script>
+</body>
+</html>

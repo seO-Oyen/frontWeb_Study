@@ -8,9 +8,26 @@
 <hr>
 <p>내일 <mark>HTML5 시험</mark><br>
 시간은 <time>09:00</time><br>
-난이도 <meter value="0.8" max="1.0">80%</meter><br>
+난이도 <span>80%</span> <meter id="met" value="0.8" max="1.0">80%</meter><br>
 자료 업로딩(20%)
-	<progress value="2" max="10"></progress><br>
+	<progress id="prog" value="2" max="10"></progress><br>
 </p>
+<script>
+	var progOb = document.querySelector("#prog")
+
+	progOb.onclick = function() {
+		alert(this.value)
+		this.value = Number(this.value) + 1
+	}
+
+	var metOb = document.querySelector("#met")
+	var spanOb = document.querySelector("span")
+
+	metOb.onclick = function() {
+		this.value = Number(this.value) - 0.05
+		var percent = Math.round(this.value * 100)
+		spanOb.innerText = percent + "%"
+	}
+</script>
 </body>
 </html>

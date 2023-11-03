@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>단일 객체</h1>
+    <h2>다중 객체1</h2>
+    <h2>다중 객체2</h2>
+    <h2>다중 객체3</h2>
+
+    <h3>테이블의 row 단위 추가</h3>
+    <table id="tab01">
+        <tr><td>1</td><td>홍길동</td></tr>
+        <tr><td>2</td><td>홍길동</td></tr>
+        <tr><td>3</td><td>홍길동</td></tr>
+    </table>
+</body>
+
+<script>
+
+    var h1Ob = document.querySelector("h1")
+    var h2Arr = document.querySelectorAll("h2")
+
+    // 단일 객체를 더블 클릭시
+    h1Ob.ondblclick = function() {
+        h2Arr[0].innerText = "변경"
+        
+        for (var i = 0; i < h2Arr.length; i++) {
+            h2Arr[i].style.color = "blue"
+        }
+    }
+
+    // 1. DOM 객체 선언
+    var h3Ob = document.querySelector("h3")
+    var tab01Ob = document.querySelector("#tab01")
+    // 2. 대상이벤트 선언 및 이벤트 핸들러 메서드 처리
+    var no = 1;
+    h3Ob.onclick = function() {
+        tab01Ob.innerHTML += "<tr><td>" + (no++) + "</td><td>홍길동</td></tr>"
+    }
+    // 3. 이벤트 핸들러 메서드 안에서 추가적인 화면 구현처리
+
+
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    이름 입력 : <input id="name01" value="홍길동"><br>
+        <input type="button" value="이름 등록" id="btn01">
+    <p>출력할 화면</p>
+    <script>
+        var name01Ob = document.querySelector("#name01")
+        var btn01Ob = document.querySelector("#btn01")
+        var pOb = document.querySelector("p")
+        // 이벤트 처리
+        btn01Ob.onclick = function() {
+            pOb.innerHTML += "<br>등록이름 : " + name01Ob.value + "<br>"
+        }
+        // 이벤트 핸들러 함수 내용 처리
+    </script>
+</body>
+</html>

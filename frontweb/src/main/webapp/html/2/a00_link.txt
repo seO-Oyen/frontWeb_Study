@@ -1,0 +1,28 @@
+# 페이지 이동 링크 처리
+1. 단계별 학습내용
+	1) 페이지 이동
+		<a href="이동할페이지">화면에 보이는 텍스트</a>
+		화면에 보이는 텍스트를 클릭시, 이동할 페이지로 이동되는 것을 말한다.
+		
+		<a href="a01_prod.html">의류페이지 이동</a>
+	
+	2) 특정한 범위의 내용이 이동 처리
+		<a href="a01_prod.html" target="frame01">의류페이지 이동</a>
+		<a href="a02_best.html" target="frame01">베스트</a>
+		<a href="a03_coop.html" target="frame01">쿠폰</a>
+		<a href="a04_deliv.html" target="frame01">스마일배송</a>
+		
+		<iframe src="페이지" name="frame01"></iframe>
+		- a href 문자를 클릭시, href에 있는 페이지가 target으로 된
+			name="frame01"를 이동시키게 하고 있다.
+	
+	3) 계층 구조
+				a01_top.html
+		<iframe>		<iframe name="mainFrame">
+		a02_left.html	a03_main.html
+		a href=""
+		target="mainFrame"
+	
+# from 객체의 데이터 전송
+1단계 : 
+	<a href="a01_send.jsp?name="홍길동"&age=25>회원 정보</a>

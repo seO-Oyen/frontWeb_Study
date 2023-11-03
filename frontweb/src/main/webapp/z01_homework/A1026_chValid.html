@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>회원가입</h2>
+        <table border>
+            <tr><th>아이디*</th><td><input type="text" name="id"></td></tr>
+            <tr><th>패스워드*</th><td><input type="password" name="pwd"></td></tr>
+            <tr><th>이름*</th><td><input type="text" name="name"></td></tr>
+            <tr><th>포인트</th><td><input type="number" name="point"></td></tr>
+            <tr><th>메일주소*</th><td><input type="email" name="email"></td></tr>
+            <tr><th colspan="2"><input type="button" value="등록" id="regBtn"></th></tr>
+
+        </table>
+    </form>
+    <script>
+        // 6. 회원 가입시, 가입 정보가 id, pass 일 때, 
+        //이름, 포인트, 메일주소일 때, 아이디, 패스워드, 이름, 메일주소는 
+        // 반드시 입력해야 등록되게 할려면 javascript 코드를 기술하세요.
+
+        var idOb = document.querySelector("[name=id]")
+        var pwdOb = document.querySelector("[name=pwd]")
+        var nameOb = document.querySelector("[name=name]")
+        var pointOb = document.querySelector("[name=point]")
+        var emailOb = document.querySelector("[name=email]")
+        var regBtnOb = document.querySelector("#regBtn")
+
+        regBtnOb.onclick = function() {
+            var isValid = true
+            if(idOb.value == "") isValid = false
+            if(pwdOb.value == "") isValid = false
+            if(nameOb.value == "") isValid = false
+            if(emailOb.value == "") isValid = false
+            if (isValid) {
+                alert("등록 완료")
+                document.querySelector("form").submit
+            } else {
+                alert("입력이 필요한 항목이 있습니다.")
+            }
+        }
+
+    </script>
+</body>
+</html>

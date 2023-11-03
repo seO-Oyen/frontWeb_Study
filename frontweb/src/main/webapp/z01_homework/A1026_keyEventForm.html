@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    구매할 물건의 가격 :
+    <input type="number" name="price" value="0"><br>
+    <table id="tabPriceOb" border>
+        <thead>
+            <tr>
+                <th>구매한 물건가격</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>총액 : 0</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <script>
+        /*
+        [1단계:확인] 3. 다음의 내용을 enter키를 통해서 입력 처리해보세요.(테이블처리 및 최하단에 누적 총액계산)
+		구매할 물건의 가격:[   ]
+				구매한물건가격
+				1000
+				2000
+				총액:@@@
+        */
+        var priceOb = document.querySelector("[name=price]")
+        var tabBodyOb = document.querySelector("#tabPriceOb tbody")
+        var totalOb = document.querySelector("#tabPriceOb tfoot th")
+        var tot = 0
+
+        priceOb.onkeyup = function() {
+            if (event.keyCode == 13) {
+                tot += Number(this.value)
+                tabBodyOb.innerHTML += "<tr><th>" + this.value + "</th></tr>"
+                totalOb.innerText = "총액 : " + tot + "원"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -4,12 +4,31 @@
 <meta charset="UTF-8">
 <title>로그인 폼</title></head>
 <body>
-<h3>로그인 폼</h3>
-<hr>
-<form name="fo" method="get">
-사용자 ID : <input type="text" size="15" value=""><br>
-비밀 번호 : <input type="password" size="15" value="">
-<input type="submit" value="완료">
-</form>
+    <!-- 
+        # form 형식
+        1. 데이터를 입력해서 서버에 전송할 때, 사용되는 형식이다.
+        2. form 이라는 상위태그에 포함되어서 처리
+            1) method : 서버에 데이터 전송하는 방식 get/post
+                get : url에 전송데이터를 보이게 처리
+                post : url이 아닌 form body에 보이지 않게 전송
+            2) action : 지정된 서버의 자원에 전송
+        3. form 하위에 구체적 요소 객체
+            1) <input>
+                - name : 서버에 데이터를 보낼 때 key
+                - value : 서버에 데이터를 보낼 때 실제 데이터
+                key = value
+
+		# 요청 값 전달 방식 (2단계)
+		1) a href="z01_send.jsp?id=himan&pwd=7777"
+		2) location.href="z01_send.jsp?id=himan&pwd=7777"
+
+    -->
+    <h3>로그인 폼</h3>
+    <hr>
+    <form name="fo" method="get" action="z01_send.jsp">
+        사용자 ID : <input name="id" type="text" size="15" value=""><br>
+        비밀 번호 : <input name="pwd" type="password" size="15" value="">
+        <input type="submit" value="완료">
+    </form>
 </body>
 </html>

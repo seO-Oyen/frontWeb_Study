@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        물건명 : <input type="text" name="itemName">
+        <input type="button" value="물건등록" id="itemBtn">
+        <p></p>
+    </form>
+    
+    <script>
+        // name="itemName" ==> js 식별자로 "[속성=속성값]"
+        var itemName = document.querySelector("[name=itemName]")
+        var btn = document.querySelector("#itemBtn")
+        var pOb = document.querySelector("p")
+
+        btn.onclick = function() {
+            pOb.innerHTML += "<br>" + itemName.value
+        }
+    </script>
+</body>
+</html>

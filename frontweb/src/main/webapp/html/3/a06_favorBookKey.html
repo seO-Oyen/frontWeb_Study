@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        form을 포함한 경우 enter키를 입력시 submit 처리되는 default
+        이벤트가 포함되어 있다.
+    -->
+
+    좋아하는 도서 : <input type="text" name="book">
+
+    <h3>도서목록(테이블)</h3>
+    <table id="bookTab" border width="300">
+        <thead>
+            <tr><th>번호</th><th>도서명</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // DOM 선언
+        var book = document.querySelector("[name=book]")
+        var bookTab = document.querySelector("#bookTab")
+
+        var cnt = 1;
+        // 이벤트 선언 핸들러 연결
+        book.onkeyup = function() {
+            // alert(event.keyCode)
+            if (event.keyCode == 13) {
+                // alert(this.value)
+                bookTab.innerHTML += `<tr><th>${cnt++}</th><th>${this.value}</th><tr>`
+                this.value = ""
+                this.focus()
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

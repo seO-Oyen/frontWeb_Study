@@ -7,11 +7,28 @@
 <h3>오늘 점심은?</h3>
 <hr>
 <form>
+	<!--
+		1. select를 통해서 option값을 선택해준다
+		2. select name을 기준으로 key설정되고
+		3. 선택한 value가 전송
+		4. option value가 있으면 label상관없이 value값 전송
+		5. option value가 없으면 label있는 값에 value로 설정되어 전송
+	-->
+	중국음식
 	<select name="china">
 		<option value="1">짜장면</option>
 		<option value="2" selected>짬뽕</option>
 		<option value="3">탕수육</option>
 	</select>
+
+	한국음식
+	<select name="korea">
+		<option value="된장찌개">된장찌개</option>
+		<option>김치찌개</option>
+		<option>설렁~탕</option>
+	</select>
+	<input type="submit"/>
+
 </form>
 </body>
 </html>

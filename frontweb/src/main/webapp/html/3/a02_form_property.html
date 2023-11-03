@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        아이디 : <input type="text" name="id1" value="입력할 아이디"><br>
+        아이디 : <input type="text" name="id2" size="3" value=""><br>
+        아이디 : <input type="text" name="id3" maxlength="5" value=""><br>
+        <!-- readonly는 쓰기만 안되고 다른 기능은 처리함 -->
+        아이디 : <input type="text" name="id4" value="읽기가능" readonly><br>
+        <!-- disabled는 보이기만하고 어떤 기능도 처리하지 않는다. -->
+        아이디 : <input type="text" name="id5" value="비활성화" disabled>
+        <button type="button" onclick="chAlive(this)">활성화</button>
+        <script>
+            function chAlive(obj) {
+                var id5Ob = document.querySelector("[name=id5]")
+
+                if (obj.innerText=='비활성화') {
+                    id5Ob.disabled = true
+                    id5Ob.value = "비활성화됨"
+                    obj.innerText = '활성화'
+                } else {
+                    id5Ob.disabled = false
+                    id5Ob.value = "활성화됨"
+                    obj.innerText = '비활성화'
+                }
+            }
+        </script>
+        <br>
+        아이디 : <input type="text" name="id6" placeholder="아이디를 입력하세요"><br>
+        <input type="submit">
+        <!-- submit 클릭시 서버에 전송 ?id=입력한값 -->
+        <input type="button" value="아이디 등록" id="regBtn">
+    </form>
+    <script>
+        var idOb = document.querySelector("[name=id]")
+        var regBtnOb = document.querySelector("#regBtn")
+
+        regBtnOb.onclick = function() {
+            alert("입력된 값 : " + idOb.value)
+        }   
+
+        var inputArr = document.querySelectorAll("input")
+        inputArr[0].onclick = function() {
+            this.value += "@"
+        }
+        inputArr[1].onclick = function() { this.size += 5 }
+        inputArr[2].onclick = function() { this.maxLength += 5 }
+        inputArr[3].onclick = function() {
+            if(this.readOnly) {
+                this.readOnly = false
+                this.value = "쓰기가능"
+            } else {
+                this.readOnly = true
+                this.value = "읽기 전용"
+            }
+        }
+        inputArr[5].onclick = function() { this.placeholder += "??^^" }
+
+
+    </script>
+</body>
+<script>
+    /*
+    # from 하위 기본 속성들
+    
+    1. form 하위 요소 객체 input, select, textarea, button은 여러가지
+        기본 속성으로 데이터를 전송하거나 모양과 크기를 변셩할 수 있다.
+    2. 공통
+        - name : name 은 client javascript로 식별할 때도 선택자로 사용하고
+            서버에 전송할 때는 key=val 중에 key로 사용 된다.
+            // [속성=속성값] 형식으로 선택자를 지정할 수 있다.
+            ex) document.querySelector("[name=id]")
+        - value : 전송할 값이나 화면에 표현된 내용으로 처리된다.
+            보통 입력된 값이 이 value 속성으로 접근할 수 있다.
+            전송시는 key에 연결되어있는 값을 말한다. key=value
+        - size : 화면에 보이는 입력크기 설정
+        - maxlength : 실제 입력할 수 있는 데이터의 크기를 설정
+        - readonly : 읽기로 설정해서, 쓰기 처리가 안되게 설정
+        - diabled : 비활성화하여 입력 및 쓰기 등 처리가 안되게 설정
+        - placeholder : 실제 value값이 아니고 안내형식으로 입력에 대한
+            정보를 출력할 때 사용. 클릭하는 순간 사라진다.
+    */
+</script>
+</html>

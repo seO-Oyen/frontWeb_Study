@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <iframe src="z06_left.html" name="frame01"></iframe>
+    <iframe src="z07_main.html" name="frame02"></iframe>
+</body>
+
+<script>
+    // window.open() ==> document.의 상위 객체
+    var iframe02Ob = document.querySelector("[name=frame02]")
+    var h2Ob = iframe02Ob.document.querySelector("h2")
+
+    h2Ob.onclick = function() {
+        alert(this.innerText)
+    }
+
+</script>
+</html>

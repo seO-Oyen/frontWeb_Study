@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        주문할 음식 : <input type="text" name="orderMenu">
+        <input type="button" value="주문" id="orderBtn">
+        <div id="show"> <!-- 주로 범위를 지정해서 화면에 출력할 때 사용하는 태그 -->
+
+        </div>
+    </form>
+
+    <script>
+        var menu = document.querySelector("[name=orderMenu]")
+        var btn = document.querySelector("#orderBtn")
+        var showDiv = document.querySelector("#show")
+        showDiv.innerHTML = "<h3>주문 목록 리스트</h3>"
+
+        btn.onclick = function() {
+            // alert(menu.value)
+            showDiv.innerHTML += menu.value + "<br>"
+            menu.value = "" // 입력과 동시에 입력할 수 있게 삭제
+            menu.focus() // 이벤트로 해당 객체에 focus를 위치시키게 해준다
+        }
+    </script>
+
+</body>
+</html>

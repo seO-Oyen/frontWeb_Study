@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    물건명 : <input type="text" name="name"><br>
+    가격 : <input type="text" name="price" id=""><br>
+    갯수 : <input type="text" name="cnt"><br>
+    <input type="button" value="등록" id="regBtn"><br>
+    <p id="show"></p>
+    
+    <script>
+        // 물건명[  ], 가격[   ], 갯수[   ] [등록] 화면에서 등록 클릭시, 
+        // 하단에 구매한 물건은 @@@, 총비용은 @@ 라고 출력되게 하세요
+        var nameOb = document.querySelector("[name=name]")
+        var priceOb = document.querySelector("[name=price]")
+        var cntOb = document.querySelector("[name=cnt]")
+        var regBtnOb = document.querySelector("#regBtn")
+        var showOb = document.querySelector("#show")
+
+        regBtnOb.onclick = function() {
+            var name = nameOb.value
+            var price = priceOb.value
+            var cnt = cntOb.value
+            showOb.innerText = `구매한 물건은 ${name}, 총비용은 ${price * cnt}`
+        }
+        regBtnOb.onfocuse = function() { this.value = "" }
+        priceOb.onfocuse = function() { this.value = "" }
+        cntOb.onfocuse = function() { this.value = "" }
+    </script>
+</body>
+</html>
