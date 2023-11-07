@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>&lt;style&gt; 태그로 스타일 만들기</title>
 <style>
+	/* # CSS(Cascading Style Sheet) => 1103 */
 body { 
 	background-color : linen; 
 	color : blueviolet;
@@ -14,13 +15,47 @@ h3 {
 	text-align : center;
 	color : darkred;
 }
+
+h2 {
+	background-color: aqua;
+	font-size: 40px;
+}
+
+div {
+	color: blue;
+	text-align: right;
+}
+
 </style>
 </head>
 <body>
+	
+<h2>김연아</h2>
+<div>
+	김연아는 대한민국의 피겨 스케이팅 선수이다. 
+	2010년 동계 올림픽 여자 싱글 부문 금메달리스트,
+	2014년 동계 올림픽 여자 싱글 부문 은메달리스트, 
+	그리고 2009년 · 2013년 세계 선수권 챔피언이며,
+	대한민국 최초의 올림픽 메달리스트, 세계선수권대회 메달리스트이다.
+</div>
+
 <h3>소연재</h3>
 <hr>
 <p>저는 체조 선수 소연재입니다. 음악을 들으면서
 책읽기를 좋아합니다. 김치 찌개와 막국수 무척
 좋아합니다.</p>
+
+<script>
+	// h2를 선택해서 객체 만든다.
+	var h2Ob = document.querySelector("h2")
+
+	// h2Ob(DOM)에 이벤트 속성을 선언 h2Ob.onclick(클릭했을 때)
+	// = function() {} : 익명함수
+	h2Ob.onclick = function() {
+		// h2Ob.style : css 속성을 javascript형태로 선언
+		h2Ob.style.color = "green" // 글자색상 초록
+		h2Ob.style.textAlign="center" // 글자 중앙정렬
+	}
+</script>
 </body>
 </html>

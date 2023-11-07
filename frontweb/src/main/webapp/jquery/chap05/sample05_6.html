@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>$(".class.otherclass") 선택자 실습</title>
+   <script type="text/javascript" src="jquery-3.1.1.js"></script>
+   <script type="text/javascript">
+
+      $(document).ready(function () {
+         $(".myClass").css("border", "2px solid blue");
+         // .클래스1.클래스2
+         // 클래스1과 클래스2가 모두 있을 때 적용되는 내용
+         $(".myClass.otherClass").css("color", "red");
+         // 하위에 있을때
+         $(".myClass .otherClass").css("background", "blue")
+         $(".cls01.cls02").css("color", "yellow ");
+         $(".cls01 .cls02").css("color", "green");
+
+      });
+   </script>
+</head>
+
+<body>
+   <div class="myClass">
+      <span class="otherClass">otherClass</span>
+   </div>
+   <div class="myClass otherClass">div class="myClass"</div>
+   <span class="myClass otherClass">span class="myClass"</span>
+
+   <div class="cls01">cls01</div>
+   <div class="cls02">cls02</div>
+   <div class="cls01 cls02">cls01</div>
+   <div class="cls01">cls01
+      <div class="cls02">cls02</div>
+   </div>
+</body>
+
+</html>

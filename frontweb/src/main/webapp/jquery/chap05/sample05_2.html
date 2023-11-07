@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>$("*") 선택자 실습</title>
+   <script type="text/javascript" src="jquery-3.1.1.js"></script>
+   <script type="text/javascript">
+
+      $(document).ready(function () {
+         $("*").css("color", "red");
+         // * : 선택자
+         // $("요소객체선택자").css("css속성", "속성값")
+         $("button").css({
+            backgroundColor: "pink",
+            color: "blue"
+         })
+         $("td").css({
+            color: "yellow",
+            backgroundColor: "green"
+         })
+      });
+   </script>
+</head>
+
+<body>
+   <div>DIV</div>
+   <span>SPAN</span>
+   <p>P <button>Button</button></p>
+
+   <table border="1">
+      <tr><td>안녕</td><td>방가</td></tr>
+      <tr><td>안녕</td><td>방가</td></tr>
+   </table>
+</body>
+
+</html>

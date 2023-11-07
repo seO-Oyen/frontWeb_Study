@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>$("prev + next") 선택자 실습</title>
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      /* 
+      # 같은 레벨의 계층구조의 현제관게 선택자 처리
+      1. 선택1 + 선택2 : 선택1 바로 앞에 둔 같은 레벨의 선택자2에서
+        적용할 내용
+      */
+      $("label + input").css("color", "blue").val("Labeled!");
+
+      /* 
+      # form의 value 속성
+      1. jquery에서는 form 하위 요소객체의 value 속성을 val("속성할당")
+        val() : 속성 가져오기 로 처리한다.
+      */
+
+      $("h1 + p").css("color", "red");
+      
+    });
+  </script>
+</head>
+
+<body>
+  <form>
+    <label for="name">Name:</label>
+    <input name="name" id="name">
+    <fieldset>
+      <label for="newsletter">Newsletter:</label>
+      <input name="newsletter" id="newsletter">
+    </fieldset>
+  </form>
+  <input name="none">
+
+  <h1>test</h1>
+  <p>테수투입니다</p>
+</body>
+
+</html>

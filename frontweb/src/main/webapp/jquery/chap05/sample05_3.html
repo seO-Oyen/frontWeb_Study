@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>$("tag"") 선택자 실습</title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$("div").css("color", "red");
+			var divArr = $("div") // jquery ==> javascript
+			// javascript 선언방법으로 처리
+			console.log("# jquery => javascript #")
+			console.log(divArr[0].innerText)
+			console.log(divArr[1].innerText)
+
+			var spanOb = document.querySelector("span")
+			console.log("# javascript => jquery")
+			$(spanOb).css("color", "blue")
+			console.log("글자 색 변환 후 내용 출력 : " + $(spanOb).text())
+
+			console.log("첫 번째 div 값:" + $("div")[0].innerHTML);
+			console.log("두 번째 div 값:" + $("div")[1].innerHTML);
+
+			// h1은 jquery ==> javascript
+			// h3는 javascript ==> jquery로 처리하되 css 설정 및 내용 변경
+			var h1Arr = $("h1")
+			console.log("#script -> query")
+			h1Arr[1].innerText = "마길동"
+			console.log(h1Arr[0].innerText)
+			console.log(h1Arr[1].innerText)
+
+			var h3Ob = document.querySelectorAll("h3")
+			$(h3Ob).css("color", "red")
+
+		});
+	</script>
+</head>
+
+<body>
+	<div>DIV1</div>
+	<div>DIV2</div>
+	<span>SPAN</span>
+	<h1>홍길동</h1>
+	<h1>김길동</h1>
+	<h3>70</h3>
+	<h3>80</h3>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>$("parent > child") 선택자 실습</title>
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      /* 
+      # 형식 1 : 선택자1 선택자2 vs 형식2 : 선택자1 > 선택자
+      1. 공통 : 둘다 계층 구조 태그에서 선택자1을 상위한 선택자2에 적용
+      2. 차이점
+        1) 형식1은 상/하위 계층 레벨 상관없이 (중간에 다른 요초객체가 계층에
+          포함되어있더라도) 선택자2에서 처리
+        2) 형식2는 상/하위 계층이 부모/자식간 바로 위 계층을 포함하여야
+          한다
+          
+      */
+      $("ul.topnav > li").css("border", "3px double red");
+      console.log($("ul.topnav > li").length);
+    });
+  </script>
+</head>
+
+<body>
+  <ul class="topnav">
+    <li>아이템 1</li>
+    <li>아이템 2
+      <ul>
+        <li>중첩 아이템 1</li>
+        <li>중첩 아이템 2</li>
+        <li>중첩 아이템 3</li>
+      </ul>
+    </li>
+    <li>아이템 3</li>
+  </ul>
+</body>
+
+</html>
