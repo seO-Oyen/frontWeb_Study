@@ -9,6 +9,8 @@
    $(document).ready(function(){
 	   $( "input[id][name$='man']" ).val( "man 글자 포함" );
 	   $( "input[value |='en']" ).css("border" , " 3px dotted red");
+	   // $( "input[value $='kr']" ).css("background" , "orange");
+	   $( "input[value |='kr']" ).css("background" , "orange");
    });
 </script>
 </head>
@@ -17,5 +19,8 @@
 <input name="milkman" value="kr">
 <input id="letterman" name="new-letterman" >
 <input name="newmilk" value="en-UK">
+<input name="milkman" value="kr-goods">
+<input name="milkman" value="kr-fruits">
+
 </body>
 </html>

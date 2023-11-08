@@ -7,6 +7,12 @@
 <script type="text/javascript">
 
    $(document).ready(function(){
+      /*
+         $("[속성*=속성값]")
+            속성값이 포함되어 있을때
+         $("[속성~=속성값]")
+            속성값이 단어로 포함되어있을때
+      */
 	   $( "input[name*='man']" ).val( "man 글자 포함" );
 	   $( "input[name~='man']" ).css("border" , " 3px solid red");
    });

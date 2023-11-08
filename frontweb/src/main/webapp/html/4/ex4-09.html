@@ -7,6 +7,7 @@
 h3, li { /* 태그 이름 셀렉터 */
 	color : brown;
 }
+/* div 자식으로 div 그 자식으로 strong에 적용 */
 div > div > strong { /* 자식 셀렉터 */
 	background : yellow;
 }
@@ -16,6 +17,7 @@ ul strong { /* 자손 셀렉터 */
 .warning { /* class 셀렉터 */
 	color : red;
 }
+/* body라는 태그에 속성 */
 body.main { /* class 셀렉터 */
 	 background : aliceblue; 
 }
@@ -25,11 +27,16 @@ body.main { /* class 셀렉터 */
 #list span{ /* 자손 셀렉터 */
 	color : forestgreen;
 }
+/* h3의 첫번째 문자 */
 h3:first-letter { /* 가상 클래스 셀렉터 */
 	color : red;
 } 
+/* li에 마우스 커서를 위치 시켰을 때 */
 li:hover { /* 가상 클래스 셀렉터 */
 	background : yellowgreen;
+}
+h2:hover {
+	background-color: pink;
 }
 </style></head>
 <body class="main">
@@ -43,6 +50,11 @@ li:hover { /* 가상 클래스 셀렉터 */
 		<li>JAVASCRIPT</li>
 	</ul>
 	<div class="warning">60점 이하는 F</div>
+
+	<h2>사과</h2>
+	<h2>바나나</h2>
+	<h2>딸기</h2>
+	<h2>오렌지</h2>
 </div>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("[value=slideUp]").click(function() {
+                $("div").slideUp("slow")
+            })
+            $("[value=slideDown]").click(function() {
+                $("div").slideDown("slow")
+            })
+            $("[value=slideToggle]").click(function() {
+                $("div").slideToggle("slow")
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="slideUp">
+    <input type="button" value="slideDown">
+    <input type="button" value="slideToggle"> <br>
+    <div style="width: 100px; height: 100px;
+        border: 1px solid blue;"></div>
+</body>
+</html>

@@ -5,14 +5,32 @@
 <title>:eq(index) Filter Selector</title>
 <script type="text/javascript" src="jquery-3.1.1.js"></script>
 <script type="text/javascript">
+  /*
+    # 다중의 선택자 처리 (1107)
+  */
 
    $(document).ready(function(){
+	   $( "td:eq( 0 )" ).css("background-color","red");
 	   $( "td:eq( 2 )" ).css("background-color","green");
-	   $( "td:eq( -1 )" ).css("background-color","green");
+	   $( "td:eq( -1 )" ).css("background-color","blue");
+
+     var ranIdx = Math.floor(Math.random() * $("td").length)
+     $("td").eq(ranIdx).css("color", "orange").text("당첨")
+
+     var ranIdx1 = Math.floor(Math.random() * $("h2").length)
+     
+     $("h2").eq(0).css("background", "yellow")
+     $("h2").eq(4).css("background", "yellow")
+     $("h2").eq(ranIdx1).css("color", "orange").text("빙고")
    });
 </script>
 </head>
 <body>
+  <h2>1</h2>
+  <h2>2</h2>
+  <h2>3</h2>
+  <h2>4</h2>
+  <h2>5</h2>
 <table border="1">
   <tr><td>TD #0</td><td>TD #1</td><td>TD #2</td></tr>
   <tr><td>TD #3</td><td>TD #4</td><td>TD #5</td></tr>

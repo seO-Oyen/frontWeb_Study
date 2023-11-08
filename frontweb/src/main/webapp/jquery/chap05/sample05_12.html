@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>$(“selector[attr]") 선택자 실습</title>
-<script type="text/javascript" src="jquery-3.1.1.js"></script>
-<script type="text/javascript">
 
-   $(document).ready(function(){
-	   $( "[id]" ).css( "font-size", "30px" );
-   });
-</script>
+<head>
+   <meta charset="UTF-8">
+   <title>$(“selector[attr]") 선택자 실습</title>
+   <script type="text/javascript" src="jquery-3.1.1.js"></script>
+   <script type="text/javascript">
+      /* 
+         # 태그의 속성 선택자 (1107)
+      */
+
+      $(document).ready(function () {
+         $("[id]").css("font-size", "30px");
+         $("[id=hey]").text("속성과 속성값 설정")
+         $("div[class=cls01]").css("color", "blue")
+         $("input[type=button]").click(function() {
+            $("div[id=there]").css("background", "yellow")
+         })
+      });
+   </script>
 </head>
+
 <body>
-<div>아이템 1</div>
-<div id="hey">아이템 2</div>
-<div id="there">아이템 3</div>
-<div>아이템 4</div>
+   <input type="button" value="클릭">
+   <input class="cls01">
+   <div class="cls01">아이템 1</div>
+   <div id="hey">아이템 2</div>
+   <div id="there">아이템 3</div>
+   <div>아이템 4</div>
 </body>
+
 </html>
