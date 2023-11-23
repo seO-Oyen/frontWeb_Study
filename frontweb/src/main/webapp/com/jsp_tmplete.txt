@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=${encoding}"
+    pageEncoding="${encoding}"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="${encoding}">
+<title>Insert title here</title>
+<script src="jquery-3.1.1.js"></script>
+<script>
+$$(document).ready( function(){
+	$$("h2").text("안녕하세요");
+})
+</script>
+</head>
+<body>
+    <h2></h2>
+${cursor}
+</body>
+</html>

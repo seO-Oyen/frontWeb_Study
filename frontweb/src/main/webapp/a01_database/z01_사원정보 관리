@@ -1,0 +1,60 @@
+# 사원정보 관리
+0. 주요 파일 및 기능 메서드
+	1) Dao 
+      frontweb.datebase.PerparedStmtDao
+         getEmpList(Emp sch) (전체조회)
+         insertEmp01(EmpDTO ins) (등록)
+         getEmp(int empno) (상세조회)
+         update(EmpDTO upt) (수정)
+         deleteEmp(int empno) (삭제)
+         
+   2) DTO
+      frontweb.vo.EmpDTO
+      vo
+      frontweb.Emp
+      
+   3) 화면단
+      webapp\a01_datebase\a01_empList.jsp (전체조회리스트)   
+      webapp\a01_datebase\a01_empinsert.jsp (전체조회리스트)   
+      webapp\a01_datebase\a01_empDetail.jsp (전체조회리스트)   
+	
+
+
+1. 초기화면은 사원정보 전체 검색 리스트에서
+2. 검색버튼 클릭, 검색처리가 되고
+3. 입력버튼 클릭시 입력화면으로 전환
+	입력화면이 나타나고 a01_empInsert.jsp
+	입력항목으로 사원번호, 사원명, 직책명, 관리자 번호
+	입사일, 급여, 보너스, 부서번호가 있고
+	여기서 등록시 등록처리를 하여
+	Dao 의 기능 메서드를 호출하여 등록처리가 된 후
+	계속 등록하시겠습니까? 여부를 확인후
+	다시 등록하던지 메인화면으로 이동처리하게 한다.
+4. 리스트 항목중에 특정한 항목을 클릭하면
+	empno키를 전송하여 상세조회화면(a02_empDetail.jsp)로 이동하고
+	입력된 항목을 볼 수 있으며
+5. 여기서 데이터를 수정 클릭사면 Dao에서 updateEmp02(EmpDTO upt)를
+	처리하여 수정이되고
+6. 상세화면에서 삭제 버튼을 클릭하면 dao에서 deleteEmp01(int deptno)를
+	처리하여 삭제 후 메인리스트 화면이 처리된다.
+	
+<script>
+	var isInsert = <%= isInsert%>
+	if (isInsert) {
+		if(!confirm("등록성공\n계속 하시겠습니까?)) }
+			location.href = "a01_empList.jsp"
+		}
+	}
+
+	
+4) DB입력된 화면 처리
+	<input type="text" name="empno" value="<%= emp.getEmpno() %>" />
+	<input type="text" name="ename" value="<%= emp.getEname() %>" />
+	<input type="text" name="job" value="<%= emp.getEmpno() %>" />
+	
+	
+5. 수정처리
+	1) 요구사항 : 상세화면에서 데이터를 변경 후, 수정버튼을 클릭시 요청값을
+		전송하여 수정할 데이터를 넘기고 수정 dao 메서드에서 수정 처리후
+		수정계속 여부를 확인하여 처리
+	
